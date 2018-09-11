@@ -1,16 +1,15 @@
 Feature: Navigate the DuckDuckGo website
 
 
-  @Smoke
   Scenario: Go to the main URL
     Given I navigate to DuckDuckGo
 
-    
+
   Scenario: Go to the main URL
     Given I navigate to DuckDuckGo
     Then the DuckDuckGo log is visible
 
-
+  @Smoke
   Scenario: I check the social network links
     Given I navigate to DuckDuckGo
     And I click the Twitter drop-down
