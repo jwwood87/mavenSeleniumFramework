@@ -1,0 +1,62 @@
+[
+  {
+    "line": 1,
+    "elements": [
+      {
+        "before": [
+          {
+            "result": {
+              "duration": 3672721160,
+              "status": "passed"
+            },
+            "match": {
+              "location": "MasterHooks.setup()"
+            }
+          }
+        ],
+        "line": 4,
+        "name": "Go to the main URL",
+        "description": "",
+        "id": "navigate-the-duckduckgo-website;go-to-the-main-url",
+        "after": [
+          {
+            "result": {
+              "duration": 809263556,
+              "status": "passed"
+            },
+            "match": {
+              "location": "MasterHooks.tearDown()"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 951240547,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "I navigate to DuckDuckGo",
+            "match": {
+              "location": "DuckGo.navigateToDuckDuckGo()"
+            },
+            "keyword": "Given "
+          }
+        ],
+        "tags": [
+          {
+            "line": 3,
+            "name": "@Smoke"
+          }
+        ]
+      }
+    ],
+    "name": "Navigate the DuckDuckGo website",
+    "description": "",
+    "id": "navigate-the-duckduckgo-website",
+    "keyword": "Feature",
+    "uri": "DuckDuckNavigation.feature"
+  }
+]
