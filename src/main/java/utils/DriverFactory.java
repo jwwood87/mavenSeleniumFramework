@@ -5,12 +5,17 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.ie.InternetExplorerDriver;
 import org.openqa.selenium.remote.DesiredCapabilities;
+import org.openqa.selenium.support.PageFactory;
+import pageObjects.ContactUs;
+import pageObjects.DuckDuckHome;
 
 import java.util.concurrent.TimeUnit;
 
 public class DriverFactory {
 
     public static WebDriver driver;
+    public static ContactUs contactUsPage;
+    public static DuckDuckHome duckDuckHomePage;
 
     public WebDriver getDriver() {
         try {
@@ -52,8 +57,9 @@ public class DriverFactory {
 
         } finally {
             driver.manage().timeouts().pageLoadTimeout(60, TimeUnit.SECONDS);
+            contactUsPage = PageFactory.initElements(driver, ContactUs.class);
+            duckDuckHomePage = PageFactory.initElements(driver, DuckDuckHome.class);
         }
-
         return driver;
     }
 }
