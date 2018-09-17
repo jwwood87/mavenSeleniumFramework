@@ -3,6 +3,7 @@ Feature: Navigate the DuckDuckGo website
 @Smoke
   Scenario: Go to the main URL
     Given I navigate to DuckDuckGo
+    And I click the Privacy Dropdown Popout
 
 
 #  Scenario: Go to the main URL

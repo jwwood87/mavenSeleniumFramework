@@ -7,7 +7,7 @@ formatter.feature({
   "keyword": "Feature"
 });
 formatter.before({
-  "duration": 3672721160,
+  "duration": 3613549905,
   "status": "passed"
 });
 formatter.scenario({
@@ -29,15 +29,27 @@ formatter.step({
   "name": "I navigate to DuckDuckGo",
   "keyword": "Given "
 });
+formatter.step({
+  "line": 6,
+  "name": "I click the Privacy Dropdown Popout",
+  "keyword": "And "
+});
 formatter.match({
   "location": "DuckGo.navigateToDuckDuckGo()"
 });
 formatter.result({
-  "duration": 951240547,
+  "duration": 970210142,
+  "status": "passed"
+});
+formatter.match({
+  "location": "DuckGo.clickThePrivacyDropdownPopout()"
+});
+formatter.result({
+  "duration": 374935786,
   "status": "passed"
 });
 formatter.after({
-  "duration": 809263556,
+  "duration": 807875468,
   "status": "passed"
 });
 });

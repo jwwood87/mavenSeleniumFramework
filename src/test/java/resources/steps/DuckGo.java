@@ -11,4 +11,11 @@ public class DuckGo extends DriverFactory {
         System.out.println("Got to the new method call in DuckGo.java");
         duckDuckHomePage.getDuckDuckHomePage();
     }
+
+    @Given("^I click the Privacy Dropdown Popout$")
+    public void clickThePrivacyDropdownPopout() throws Exception {
+
+        System.out.println("Got to the new method call in DuckGo.java");
+        duckDuckHomePage.clickPrivacyPopout();
+    }
 }

@@ -6,7 +6,7 @@
         "before": [
           {
             "result": {
-              "duration": 3672721160,
+              "duration": 3613549905,
               "status": "passed"
             },
             "match": {
@@ -21,7 +21,7 @@
         "after": [
           {
             "result": {
-              "duration": 809263556,
+              "duration": 807875468,
               "status": "passed"
             },
             "match": {
@@ -34,7 +34,7 @@
         "steps": [
           {
             "result": {
-              "duration": 951240547,
+              "duration": 970210142,
               "status": "passed"
             },
             "line": 5,
@@ -43,6 +43,18 @@
               "location": "DuckGo.navigateToDuckDuckGo()"
             },
             "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 374935786,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "I click the Privacy Dropdown Popout",
+            "match": {
+              "location": "DuckGo.clickThePrivacyDropdownPopout()"
+            },
+            "keyword": "And "
           }
         ],
         "tags": [

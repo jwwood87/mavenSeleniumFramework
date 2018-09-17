@@ -30,11 +30,11 @@ public class BasePage extends DriverFactory {
 		while (!clicked && attempts < 10) {
 			try {
 				this.wait.until(ExpectedConditions.elementToBeClickable(element)).click();
-				System.out.println("Successfully clicked on the WebElement: " + "<" + element.toString() + ">");
+				System.out.println("\nSuccessfully clicked on the WebElement: " + "<" + element.toString() + ">");
 				clicked = true;
 			} catch (Exception e) {
-				System.out.println("Unable to wait and click on WebElement, Exception: " + e.getMessage());
-				Assert.fail("Unable to wait and click on the WebElement, using locator: " + "<" + element.toString() + ">");
+				System.out.println("\nUnable to wait and click on WebElement, Exception: " + e.getMessage());
+				Assert.fail("\nUnable to wait and click on the WebElement, using locator: " + "<" + element.toString() + ">");
 			}
 			attempts++;
 		}
@@ -46,11 +46,11 @@ public class BasePage extends DriverFactory {
 		while (!clicked && attempts < 10) {
 			try {
 				this.wait.until(ExpectedConditions.elementToBeClickable(by)).click();
-				System.out.println("Successfully clicked on the element using by locator: " + "<" + by.toString() + ">");
+				System.out.println("\nSuccessfully clicked on the element using by locator: " + "<" + by.toString() + ">");
 				clicked = true;
 			} catch (Exception e) {
-				System.out.println("Unable to wait and click on the element using the By locator, Exception: " + e.getMessage());
-				Assert.fail("Unable to wait and click on the element using the By locator, element: " + "<"+ by.toString() + ">");
+				System.out.println("\nUnable to wait and click on the element using the By locator, Exception: " + e.getMessage());
+				Assert.fail("\nUnable to wait and click on the element using the By locator, element: " + "<"+ by.toString() + ">");
 			}
 			attempts++;
 		}
@@ -62,10 +62,10 @@ public class BasePage extends DriverFactory {
 			tempWait.until(ExpectedConditions.elementToBeClickable(list)).click();
 			list.sendKeys(textToSearchFor);
 			list.sendKeys(Keys.ENTER);
-			System.out.println("Successfully sent the following keys: " + textToSearchFor + ", to the following WebElement: " + "<" + list.toString() + ">");
+			System.out.println("\nSuccessfully sent the following keys: " + textToSearchFor + ", to the following WebElement: " + "<" + list.toString() + ">");
 		} catch (Exception e) {
-			System.out.println("Unable to send the following keys: " + textToSearchFor + ", to the following WebElement: " + "<" + list.toString() + ">");
-			Assert.fail("Unable to select the required text from the dropdown menu, Exception: " + e.getMessage());
+			System.out.println("\nUnable to send the following keys: " + textToSearchFor + ", to the following WebElement: " + "<" + list.toString() + ">");
+			Assert.fail("\nUnable to select the required text from the dropdown menu, Exception: " + e.getMessage());
 		}
 	}
 
@@ -75,10 +75,10 @@ public class BasePage extends DriverFactory {
 			final WebDriverWait customWait = new WebDriverWait(driver, timeout);
 			customWait.until(ExpectedConditions.refreshed(ExpectedConditions.elementToBeClickable(locator)));
 			locator.click();
-			System.out.println("Successfully clicked on the WebElement, using locator: " + "<" + locator + ">"+ ", using a custom Timeout of: " + timeout);
+			System.out.println("\nSuccessfully clicked on the WebElement, using locator: " + "<" + locator + ">"+ ", using a custom Timeout of: " + timeout);
 		} catch (Exception e) {
-			System.out.println("Unable to click on the WebElement, using locator: " + "<" + locator + ">" + ", using a custom Timeout of: " + timeout);
-			Assert.fail("Unable to click on the WebElement, Exception: " + e.getMessage());
+			System.out.println("\nUnable to click on the WebElement, using locator: " + "<" + locator + ">" + ", using a custom Timeout of: " + timeout);
+			Assert.fail("\nUnable to click on the WebElement, Exception: " + e.getMessage());
 		}
 	}
 	
@@ -95,7 +95,7 @@ public class BasePage extends DriverFactory {
 		try {
 			this.wait.until(ExpectedConditions.elementToBeClickable(element)).isEnabled();
 			ob.moveToElement(element).click().build().perform();
-			System.out.println("Successfully Action Moved and Clicked on the WebElement, using locator: " + "<" + element.toString() + ">");
+			System.out.println("\nSuccessfully Action Moved and Clicked on the WebElement, using locator: " + "<" + element.toString() + ">");
 		} catch (StaleElementReferenceException elementUpdated) {
 			WebElement elementToClick = element;
 			Boolean elementPresent = wait.until(ExpectedConditions.elementToBeClickable(elementToClick)).isEnabled();
@@ -104,8 +104,8 @@ public class BasePage extends DriverFactory {
 				System.out.println("(Stale Exception) - Successfully Action Moved and Clicked on the WebElement, using locator: " + "<" + element.toString() + ">");
 			}
 		} catch (Exception e) {
-			System.out.println("Unable to Action Move and Click on the WebElement, using locator: " + "<" + element.toString() + ">");
-			Assert.fail("Unable to Action Move and Click on the WebElement, Exception: " + e.getMessage());
+			System.out.println("\nUnable to Action Move and Click on the WebElement, using locator: " + "<" + element.toString() + ">");
+			Assert.fail("\nUnable to Action Move and Click on the WebElement, Exception: " + e.getMessage());
 		}
 	}
 
@@ -116,15 +116,15 @@ public class BasePage extends DriverFactory {
 			if (elementPresent == true) {
 				WebElement elementToClick = driver.findElement(element);
 				ob.moveToElement(elementToClick).click().build().perform();
-				System.out.println("Action moved and clicked on the following element, using By locator: " + "<" + element.toString() + ">");
+				System.out.println("\nAction moved and clicked on the following element, using By locator: " + "<" + element.toString() + ">");
 			}
 		} catch (StaleElementReferenceException elementUpdated) {
 			WebElement elementToClick = driver.findElement(element);
 			ob.moveToElement(elementToClick).click().build().perform();
 			System.out.println("(Stale Exception) - Action moved and clicked on the following element, using By locator: "+ "<" + element.toString() + ">");
 		} catch (Exception e) {
-			System.out.println("Unable to Action Move and Click on the WebElement using by locator: " + "<" + element.toString() + ">");
-			Assert.fail("Unable to Action Move and Click on the WebElement using by locator, Exception: " + e.getMessage());
+			System.out.println("\nUnable to Action Move and Click on the WebElement using by locator: " + "<" + element.toString() + ">");
+			Assert.fail("\nUnable to Action Move and Click on the WebElement using by locator, Exception: " + e.getMessage());
 		}
 	}
 
@@ -140,10 +140,10 @@ public class BasePage extends DriverFactory {
 			this.WaitUntilWebElementIsVisible(element);
 			element.clear();
 			element.sendKeys(textToSend);
-			System.out.println("Successfully Sent the following keys: '" + textToSend + "' to element: " + "<"+ element.toString() + ">");
+			System.out.println("\nSuccessfully Sent the following keys: '" + textToSend + "' to element: " + "<"+ element.toString() + ">");
 		} catch (Exception e) {
-			System.out.println("Unable to locate WebElement: " + "<" + element.toString() + "> and send the following keys: " + textToSend);
-			Assert.fail("Unable to send keys to WebElement, Exception: " + e.getMessage());
+			System.out.println("\nUnable to locate WebElement: " + "<" + element.toString() + "> and send the following keys: " + textToSend);
+			Assert.fail("\nUnable to send keys to WebElement, Exception: " + e.getMessage());
 		}
 	}
 
@@ -161,8 +161,8 @@ public class BasePage extends DriverFactory {
 			((JavascriptExecutor) driver).executeScript("window.scrollBy(0, -400)");
 			System.out.println("Succesfully scrolled to the WebElement, using locator: " + "<" + element.toString() + ">");
 		} catch (Exception e) {
-			System.out.println("Unable to scroll to the WebElement, using locator: " + "<" + element.toString() + ">");
-			Assert.fail("Unable to scroll to the WebElement, Exception: " + e.getMessage());
+			System.out.println("\nUnable to scroll to the WebElement, using locator: " + "<" + element.toString() + ">");
+			Assert.fail("\nUnable to scroll to the WebElement, Exception: " + e.getMessage());
 		}
 	}
 
@@ -172,8 +172,8 @@ public class BasePage extends DriverFactory {
 			js.executeScript("scroll(" + numb1 + "," + numb2 + ")");
 			System.out.println("Succesfully scrolled to the correct position! using locators: " + numb1 + ", " + numb2);
 		} catch (Exception e) {
-			System.out.println("Unable to scroll to element using locators: " + "<" + numb1 + "> " + " <" + numb2 + ">");
-			Assert.fail("Unable to manually scroll to WebElement, Exception: " + e.getMessage());
+			System.out.println("\nUnable to scroll to element using locators: " + "<" + numb1 + "> " + " <" + numb2 + ">");
+			Assert.fail("\nUnable to manually scroll to WebElement, Exception: " + e.getMessage());
 		}
 	}
 
@@ -182,7 +182,7 @@ public class BasePage extends DriverFactory {
 		try {
 			wait.until(ExpectedConditions.elementToBeClickable(element));
 			js.executeScript("arguments[0].click();", element);
-			System.out.println("Successfully JS clicked on the following WebElement: " + "<" + element.toString() + ">");
+			System.out.println("\nSuccessfully JS clicked on the following WebElement: " + "<" + element.toString() + ">");
 		} catch (StaleElementReferenceException elementUpdated) {
 			WebElement staleElement = element;
 			Boolean elementPresent = wait.until(ExpectedConditions.elementToBeClickable(staleElement)).isEnabled();
@@ -191,8 +191,8 @@ public class BasePage extends DriverFactory {
 				System.out.println("(Stale Exception) Successfully JS clicked on the following WebElement: " + "<" + element.toString() + ">");
 			}
 		} catch (NoSuchElementException e) {
-			System.out.println("Unable to JS click on the following WebElement: " + "<" + element.toString() + ">");
-			Assert.fail("Unable to JS click on the WebElement, Exception: " + e.getMessage());
+			System.out.println("\nUnable to JS click on the following WebElement: " + "<" + element.toString() + ">");
+			Assert.fail("\nUnable to JS click on the WebElement, Exception: " + e.getMessage());
 		}
 	}
 
@@ -267,7 +267,7 @@ public class BasePage extends DriverFactory {
 			System.out.println("Found(Got) the following URL: " + url);
 			return url;
 		} catch (Exception e) {
-			System.out.println("Unable to locate (Get) the current URL, Exception: " + e.getMessage());
+			System.out.println("\nUnable to locate (Get) the current URL, Exception: " + e.getMessage());
 			return e.getMessage();
 		}
 	}
@@ -336,8 +336,8 @@ public class BasePage extends DriverFactory {
 			Alert alert = driver.switchTo().alert();
 			alert.accept();
 		} catch (Exception e) {
-			System.out.println("Unable to close the popup");
-			Assert.fail("Unable to close the popup, Exception: " + e.getMessage());
+			System.out.println("\nUnable to close the popup");
+			Assert.fail("\nUnable to close the popup, Exception: " + e.getMessage());
 		}
 	}
 	/**********************************************************************************/
