@@ -7,14 +7,14 @@ formatter.feature({
   "keyword": "Feature"
 });
 formatter.before({
-  "duration": 3613549905,
+  "duration": 3766524653,
   "status": "passed"
 });
 formatter.scenario({
   "line": 4,
-  "name": "Go to the main URL",
+  "name": "Go to the main URL and main elements are displayed",
   "description": "",
-  "id": "navigate-the-duckduckgo-website;go-to-the-main-url",
+  "id": "navigate-the-duckduckgo-website;go-to-the-main-url-and-main-elements-are-displayed",
   "type": "scenario",
   "keyword": "Scenario",
   "tags": [
@@ -31,25 +31,73 @@ formatter.step({
 });
 formatter.step({
   "line": 6,
-  "name": "I click the Privacy Dropdown Popout",
+  "name": "I close the Ad Track Popup",
   "keyword": "And "
+});
+formatter.step({
+  "line": 7,
+  "name": "the Duck Duck Logo is displayed",
+  "keyword": "Then "
+});
+formatter.step({
+  "line": 8,
+  "name": "the Privacy Dropdown Popout button is displayed",
+  "keyword": "Then "
+});
+formatter.step({
+  "line": 9,
+  "name": "the Social Networking button is displayed",
+  "keyword": "Then "
+});
+formatter.step({
+  "line": 10,
+  "name": "the hamburger icon is displayed",
+  "keyword": "Then "
 });
 formatter.match({
   "location": "DuckGo.navigateToDuckDuckGo()"
 });
 formatter.result({
-  "duration": 970210142,
+  "duration": 1006503536,
   "status": "passed"
 });
 formatter.match({
-  "location": "DuckGo.clickThePrivacyDropdownPopout()"
+  "location": "DuckGo.closeTheAdTrackPopup()"
 });
 formatter.result({
-  "duration": 374935786,
+  "duration": 197441935,
+  "status": "passed"
+});
+formatter.match({
+  "location": "DuckGo.the_Duck_Duck_Logo_is_displayed()"
+});
+formatter.result({
+  "duration": 56556073,
+  "status": "passed"
+});
+formatter.match({
+  "location": "DuckGo.the_Privacy_Dropdown_Popout_button_is_displayed()"
+});
+formatter.result({
+  "duration": 46486173,
+  "status": "passed"
+});
+formatter.match({
+  "location": "DuckGo.the_Social_Networking_button_is_displayed()"
+});
+formatter.result({
+  "duration": 27876,
+  "status": "passed"
+});
+formatter.match({
+  "location": "DuckGo.the_hamburger_icon_is_displayed()"
+});
+formatter.result({
+  "duration": 38685,
   "status": "passed"
 });
 formatter.after({
-  "duration": 807875468,
+  "duration": 969880755,
   "status": "passed"
 });
 });

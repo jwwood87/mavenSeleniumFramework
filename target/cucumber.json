@@ -6,7 +6,7 @@
         "before": [
           {
             "result": {
-              "duration": 3613549905,
+              "duration": 3766524653,
               "status": "passed"
             },
             "match": {
@@ -15,13 +15,13 @@
           }
         ],
         "line": 4,
-        "name": "Go to the main URL",
+        "name": "Go to the main URL and main elements are displayed",
         "description": "",
-        "id": "navigate-the-duckduckgo-website;go-to-the-main-url",
+        "id": "navigate-the-duckduckgo-website;go-to-the-main-url-and-main-elements-are-displayed",
         "after": [
           {
             "result": {
-              "duration": 807875468,
+              "duration": 969880755,
               "status": "passed"
             },
             "match": {
@@ -34,7 +34,7 @@
         "steps": [
           {
             "result": {
-              "duration": 970210142,
+              "duration": 1006503536,
               "status": "passed"
             },
             "line": 5,
@@ -46,15 +46,63 @@
           },
           {
             "result": {
-              "duration": 374935786,
+              "duration": 197441935,
               "status": "passed"
             },
             "line": 6,
-            "name": "I click the Privacy Dropdown Popout",
+            "name": "I close the Ad Track Popup",
             "match": {
-              "location": "DuckGo.clickThePrivacyDropdownPopout()"
+              "location": "DuckGo.closeTheAdTrackPopup()"
             },
             "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 56556073,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "the Duck Duck Logo is displayed",
+            "match": {
+              "location": "DuckGo.the_Duck_Duck_Logo_is_displayed()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 46486173,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "the Privacy Dropdown Popout button is displayed",
+            "match": {
+              "location": "DuckGo.the_Privacy_Dropdown_Popout_button_is_displayed()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 27876,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "the Social Networking button is displayed",
+            "match": {
+              "location": "DuckGo.the_Social_Networking_button_is_displayed()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 38685,
+              "status": "passed"
+            },
+            "line": 10,
+            "name": "the hamburger icon is displayed",
+            "match": {
+              "location": "DuckGo.the_hamburger_icon_is_displayed()"
+            },
+            "keyword": "Then "
           }
         ],
         "tags": [

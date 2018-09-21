@@ -1,7 +1,7 @@
 package resources.steps;
 
-import cucumber.api.java.After;
 import cucumber.api.java.Before;
+import cucumber.api.java.After;
 import utils.DriverFactory;
 
 public class MasterHooks extends DriverFactory{

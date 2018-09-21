@@ -47,7 +47,7 @@
 		<ul id='nav-mobile' class='right hide-on-med-and-down nav-right'>
 			<li>
                 <a href='#!'>
-                    <span class='label suite-start-time blue darken-3'>Sep 16, 2018 04:44:15 PM</span>
+                    <span class='label suite-start-time blue darken-3'>Sep 20, 2018 09:21:34 PM</span>
 				</a>
 			</li>
 			<li>
@@ -163,7 +163,7 @@
 					<canvas id='grandchild-analysis' width='100' height='80'></canvas>
 				</div>
 				<div class='block text-small'>
-					<span class='tooltipped' data-position='top' data-tooltip='100%'><span class='strong'>2</span> step(s) passed</span>
+					<span class='tooltipped' data-position='top' data-tooltip='100%'><span class='strong'>6</span> step(s) passed</span>
 				</div>
 				<div class='block text-small'>
 					<span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> step(s) failed, <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> others
@@ -183,7 +183,7 @@
 				<li class='test displayed active has-leaf pass' status='pass' bdd='true' test-id='1'>
 					<div class='test-heading'>
 						<span class='test-name'>Navigate the DuckDuckGo website</span>
-						<span class='test-time'>Sep 16, 2018 04:44:15 PM</span>
+						<span class='test-time'>Sep 20, 2018 09:21:34 PM</span>
 						<span class='test-status right pass'>pass</span>
 					</div>
 					<div class='test-content hide'>
@@ -191,10 +191,10 @@
 	<div class='category-list'>
 		<span class='category label white-text'>@Smoke</span>
 	</div>
-	<span class='duration right label'>0h 0m 5s+55ms</span>
+	<span class='duration right label'>0h 0m 5s+172ms</span>
 	<div class='desc'>
 		<b>Scenario</b>
-		<span class="desc-text">Go to the main URL</span>
+		<span class="desc-text">Go to the main URL and main elements are displayed</span>
 	</div>
 	<ul class='steps'>
 		<li test-id='3' class='node given pass' status='pass'>
@@ -209,7 +209,39 @@
 			
 			<b>And</b>
 			
-			<span class="bdd-step-name">And I click the Privacy Dropdown Popout</span>
+			<span class="bdd-step-name">And I close the Ad Track Popup</span>
+				<div class='pre'>passed</div>
+			
+		</li>
+		<li test-id='5' class='node then pass' status='pass'>
+			
+			<b>Then</b>
+			
+			<span class="bdd-step-name">Then the Duck Duck Logo is displayed</span>
+				<div class='pre'>passed</div>
+			
+		</li>
+		<li test-id='6' class='node then pass' status='pass'>
+			
+			<b>Then</b>
+			
+			<span class="bdd-step-name">Then the Privacy Dropdown Popout button is displayed</span>
+				<div class='pre'>passed</div>
+			
+		</li>
+		<li test-id='7' class='node then pass' status='pass'>
+			
+			<b>Then</b>
+			
+			<span class="bdd-step-name">Then the Social Networking button is displayed</span>
+				<div class='pre'>passed</div>
+			
+		</li>
+		<li test-id='8' class='node then pass' status='pass'>
+			
+			<b>Then</b>
+			
+			<span class="bdd-step-name">Then the hamburger icon is displayed</span>
 				<div class='pre'>passed</div>
 			
 		</li>
@@ -292,8 +324,8 @@
 								</thead>
 								<tbody>
 									<tr>
-										<td>Sep 16, 2018 04:44:15 PM</td>
-										<td class='linked' test-id='2'>Navigate the DuckDuckGo website.Go to the main URL</td>
+										<td>Sep 20, 2018 09:21:34 PM</td>
+										<td class='linked' test-id='2'>Navigate the DuckDuckGo website.Go to the main URL and main elements are displayed</td>
 										<td><span class='test-status pass'>pass</span></td>
 									</tr>
 								</tbody>
@@ -334,25 +366,25 @@
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Steps
-					<div class='panel-lead'>2</div>
+					<div class='panel-lead'>6</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Start
-					<div class='panel-lead'>Sep 16, 2018 04:44:15 PM</div>
+					<div class='panel-lead'>Sep 20, 2018 09:21:34 PM</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 			 		End
-			 		<div class='panel-lead'>Sep 16, 2018 04:44:21 PM</div>
+			 		<div class='panel-lead'>Sep 20, 2018 09:21:40 PM</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Time Taken
-					<div class='panel-lead'>6,128ms</div>
+					<div class='panel-lead'>6,424ms</div>
 				</div>
 			</div>
 			<div class='col s4'>
@@ -402,7 +434,7 @@
 				infoChild: 0,
 				exceptionsChild: 0,
 				
-				passGrandChild: 2,
+				passGrandChild: 6,
 				failGrandChild: 0,
 				fatalGrandChild: 0,
 				errorGrandChild: 0,
